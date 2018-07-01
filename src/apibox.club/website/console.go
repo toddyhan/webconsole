@@ -226,6 +226,7 @@ func SSHWebSocketHandler(w http.ResponseWriter, r *http.Request) {
 					m, p, err := ws.ReadMessage()
 					if err != nil {
 						apibox.Log_Warn(err.Error())
+						channel.Close()
 						return
 					}
 
