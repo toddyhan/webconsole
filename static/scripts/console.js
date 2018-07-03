@@ -202,10 +202,6 @@
                     $(document).prop("title", title);
                 });
 
-                term.on('paste', function(data, ev) {
-                    term.write(data);
-                });
-
                 window.term = term;
                 window.socket = socket;
             };
